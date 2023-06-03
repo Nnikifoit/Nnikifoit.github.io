@@ -131,6 +131,11 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+.button:hover {
+  background-color: #fff;
+  color: #C70101;
+  font-weight: 700;
+}
 .button_main {
   margin-top: 67px;
   width: 300px;
@@ -198,6 +203,18 @@
 .advantages__descr a {
   color: #ff0000;
   text-decoration: underline;
+}
+.advantages__icon_animated {
+  -webkit-animation: heartbeat 1.5s ease infinite;
+          animation: heartbeat 1.5s ease infinite;
+  /* animation-name: heartbeat;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite; */
+}
+.advantages__icon_animated:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .consultation {
@@ -576,4 +593,45 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.pageup {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+}
+.pageup img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
